@@ -175,9 +175,7 @@ struct private_handle_t : public native_handle_t {
   uint64_t base;
   uint64_t base_metadata;
   uint64_t gpuaddr;
-#ifdef GRALLOC_HANDLE_HAS_RESERVED_SIZE
   unsigned int reserved_size;
-#endif
 #ifdef GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE
   unsigned int custom_content_md_reserved_size;
 #endif
@@ -209,9 +207,7 @@ struct private_handle_t : public native_handle_t {
         base(0),
         base_metadata(0),
         gpuaddr(0)
-#ifdef GRALLOC_HANDLE_HAS_RESERVED_SIZE
         ,reserved_size(0)
-#endif
 #ifdef GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE
         ,custom_content_md_reserved_size(0)
 #endif

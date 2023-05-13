@@ -129,9 +129,7 @@ struct private_handle_t {
   uint64_t base;
   uint64_t base_metadata;
   uint64_t gpuaddr;
-#ifdef GRALLOC_HANDLE_HAS_RESERVED_SIZE
   unsigned int reserved_size;
-#endif
 #ifdef __cplusplus
   static const int kNumFds = 2;
   static const int kMagic = 'gmsm';
@@ -161,9 +159,7 @@ struct private_handle_t {
         base(0),
         base_metadata(0),
         gpuaddr(0)
-#ifdef GRALLOC_HANDLE_HAS_RESERVED_SIZE
         ,reserved_size(0)
-#endif
   {
     version = static_cast<int>(sizeof(native_handle));
     numInts = NumInts();
